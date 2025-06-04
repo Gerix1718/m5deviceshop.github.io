@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil - Webshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><!-- Ugyanaz mint index.html --></header>
+    <main>
+        <section class="profile-section">
+            <h2>Profil</h2>
+            <div class="profile-tabs">
+                <button class="active" data-tab="login">Bejelentkezés</button>
+                <button data-tab="register">Regisztráció</button>
+                <button data-tab="orders">Rendeléseim</button>
+            </div>
+            <div class="profile-content">
+                <div class="tab login active">
+                    <form>
+                        <label>Email:<input type="email" required></label>
+                        <label>Jelszó:<input type="password" required></label>
+                        <button type="submit">Bejelentkezés</button>
+                    </form>
+                </div>
+                <div class="tab register">
+                    <form>
+                        <label>Név:<input type="text" required></label>
+                        <label>Email:<input type="email" required></label>
+                        <label>Jelszó:<input type="password" required></label>
+                        <button type="submit">Regisztráció</button>
+                    </form>
+                </div>
+                <div class="tab orders">
+                    <h3>Korábbi rendelések</h3>
+                    <ul class="orders-list">
+                        <li>2024.10.10 - #ORD123456 - 159 000 Ft - <span>Szállítva</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer><!-- Ugyanaz mint index.html --></footer>
+</body>
+</html>
