@@ -1,0 +1,158 @@
+:root {
+    --blue: #1571e6;
+    --blue-light: #6bcbff;
+    --blue-dark: #003c80;
+    --white: #fff;
+    --glass: rgba(255,255,255,0.85);
+    --radius: 20px;
+    --shadow: 0 6px 32px #1571e622;
+    --header-height: 76px;
+}
+html, body {
+    margin: 0; padding: 0;
+    font-family: 'Nunito', 'Lato', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(120deg, var(--blue-light) 50%, var(--white) 100%);
+    color: var(--blue-dark);
+    min-height: 100vh;
+}
+header {
+    background: var(--blue);
+    color: var(--white);
+    box-shadow: var(--shadow);
+    height: var(--header-height);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.container.header-flex {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--header-height);
+    padding: 0 2em;
+}
+.logo img {
+    height: 48px;
+}
+nav ul {
+    display: flex;
+    gap: 1.1em;
+    margin: 0; padding: 0; list-style: none;
+}
+nav ul li a {
+    color: var(--white);
+    font-weight: 700;
+    text-decoration: none;
+    padding: .4em 1em;
+    border-radius: 17px;
+    transition: background .18s;
+    font-size: 1.05em;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    background: var(--blue-light);
+    color: var(--blue-dark);
+}
+.header-icons {
+    display: flex; gap: 1em;
+    align-items: center;
+}
+.header-icons .icon img {
+    height: 28px;
+    filter: drop-shadow(0 2px 4px #00408033);
+}
+.header-icons .cart-count {
+    font-size: .95em;
+    background: #fff;
+    color: var(--blue);
+    border-radius: 50%;
+    padding: 0 7px;
+    position: relative;
+    left: -13px; top: -10px;
+    font-weight: 700;
+}
+.header-promo {
+    background: var(--blue-dark);
+    color: #fff;
+    text-align: center;
+    font-size: 1em;
+    padding: .5em 0;
+}
+.btn, .cta, button, input[type=submit] {
+    background: linear-gradient(90deg, var(--blue) 70%, var(--blue-light) 120%);
+    color: #fff;
+    border: none;
+    border-radius: 22px;
+    padding: .7em 2em;
+    font-size: 1.07em;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 2px 6px #1571e633;
+    transition: background .14s, transform .14s;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn:hover, .cta:hover, button:hover, input[type=submit]:hover {
+    background: linear-gradient(90deg, var(--blue-light) 60%, var(--blue) 120%);
+    color: var(--blue-dark);
+    transform: scale(1.05);
+}
+.glass {
+    background: var(--glass);
+    box-shadow: 0 1px 16px #1571e618;
+}
+.card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 1px 13px #1571e616;
+    padding: 2em 1.2em;
+}
+@media (max-width: 900px) {
+    nav ul, .category-list, .promo-cards, .reviews, .footer-top  { flex-direction: column; gap:1.5em; }
+    .container.header-flex { padding: 0 .5em;}
+}
+footer {
+    background: var(--blue-dark);
+    color: #e5efff;
+    font-family: 'Nunito', 'Lato', 'Roboto', Arial, sans-serif;
+    padding: 2.5em 0 1.2em 0;
+    margin-top: 3em;
+}
+.footer-top {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-top div { min-width: 150px; }
+.footer-top h4 { color: #fff; margin-bottom: .5em; }
+.footer-top ul { list-style: none; padding: 0; margin: 0; }
+.footer-top ul li { margin-bottom: .4em; }
+.footer-top ul li a {
+    color: #e5efff; text-decoration: none; font-size: 1.03em; transition: color .13s;
+}
+.footer-top ul li a:hover { color: var(--blue-light); }
+.footer-top .social { display: flex; gap: .8em; margin-top:.6em; }
+.footer-top .social img { height: 30px; filter: brightness(0) invert(.95); transition: filter .17s; }
+.footer-top .social img:hover { filter: brightness(1.5) invert(.15); }
+.footer-bottom {
+    max-width: 1200px;
+    margin: 1.5em auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+    border-top: 1.5px solid #2066c233;
+    font-size: .98em;
+    color: #b5cdf3;
+}
+.footer-bottom a { color: #b5cdf3; margin-left: 1em; text-decoration: none; }
+.footer-bottom a:hover { color: #fff; }
+@media (max-width: 900px) {
+    .footer-top { flex-direction: column; gap:1.5em;}
+    .footer-bottom { flex-direction: column; gap:0.7em;}
+}
