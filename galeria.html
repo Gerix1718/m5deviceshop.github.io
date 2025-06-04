@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Galéria - Webshop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:400,700|Roboto:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header><!-- Ugyanaz mint index.html --></header>
+    <main>
+        <div class="galeria-main">
+            <h1 class="galeria-title">Termék és Márka Galéria</h1>
+            <div class="galeria-filters">
+                <button class="active" onclick="filterGallery('all')">Összes</button>
+                <button onclick="filterGallery('termek')">Termékek</button>
+                <button onclick="filterGallery('marka')">Márkák</button>
+                <button onclick="filterGallery('inspiracio')">Inspiráció</button>
+            </div>
+            <div class="galeria-grid" id="galeriaGrid">
+                <div class="galeria-item termek">
+                    <img src="products/product1.jpg" alt="iPhone 15 Pro">
+                    <div class="brand">Apple iPhone 15 Pro</div>
+                    <div class="caption">Csúcskategóriás okostelefon, 128GB, Space Gray.</div>
+                </div>
+                <div class="galeria-item termek">
+                    <img src="products/product2.jpg" alt="Samsung S24">
+                    <div class="brand">Samsung Galaxy S24</div>
+                    <div class="caption">Erőteljes Android telefon, 256GB, Fekete.</div>
+                </div>
+                <div class="galeria-item marka">
+                    <img src="brands/apple.png" alt="Apple logó">
+                    <div class="brand">Apple</div>
+                    <div class="caption">Innováció, dizájn, minőség.</div>
+                </div>
+                <div class="galeria-item marka">
+                    <img src="brands/samsung.png" alt="Samsung logó">
+                    <div class="brand">Samsung</div>
+                    <div class="caption">Fejlett technológia, széles kínálat.</div>
+                </div>
+                <div class="galeria-item inspiracio">
+                    <img src="inspo/livingroom.jpg" alt="Modern nappali">
+                    <div class="brand">Modern Otthon</div>
+                    <div class="caption">Stílusos nappali inspiráció, tágas tér, világos színek.</div>
+                </div>
+                <div class="galeria-item inspiracio">
+                    <img src="inspo/kitchen.jpg" alt="Konyha inspiráció">
+                    <div class="brand">Konyhai ötlet</div>
+                    <div class="caption">Okos háztartási gépek, letisztult vonalak.</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function filterGallery(type) {
+                document.querySelectorAll('.galeria-filters button').forEach(btn=>btn.classList.remove('active'));
+                if(type==='all') document.querySelectorAll('.galeria-filters button')[0].classList.add('active');
+                if(type==='termek') document.querySelectorAll('.galeria-filters button')[1].classList.add('active');
+                if(type==='marka') document.querySelectorAll('.galeria-filters button')[2].classList.add('active');
+                if(type==='inspiracio') document.querySelectorAll('.galeria-filters button')[3].classList.add('active');
+                document.querySelectorAll('.galeria-item').forEach(item=>{
+                    if(type==='all') item.style.display='';
+                    else if(item.classList.contains(type)) item.style.display='';
+                    else item.style.display='none';
+                });
+            }
+        </script>
+    </main>
+    <footer><!-- Ugyanaz mint index.html --></footer>
+</body>
+</html>
