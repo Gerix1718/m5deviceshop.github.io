@@ -1,266 +1,131 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>M5 Webshop</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; }
-    header, nav, main, footer { width: 100%; }
-    .container { max-width:1200px; margin:0 auto; padding: 0 20px; }
-    .logo { font-size:2rem; font-weight:bold; letter-spacing:2px; }
-    .search-bar input { width: 300px; padding: 8px; }
-    .nav-categories { display: flex; gap: 20px; }
-    .hero { background: #eee; padding:40px 0; text-align:center; }
-    .products { display: flex; flex-wrap: wrap; gap:24px; }
-    .product-card { border:1px solid #ddd; border-radius:8px; padding:16px; width:calc(25% - 24px); background:#fff; }
-    .product-image { width:100%; height:150px; background:#ccc; border-radius:4px; margin-bottom:12px; }
-    .cta { background:#007bff; color:#fff; border:none; padding:10px 20px; border-radius:6px; cursor:pointer; }
-    .cta:hover { background:#0056b3; }
-    .newsletter { background:#f2f2f2; padding:30px 0; text-align:center; }
-    .footer { background:#222; color:#eee; padding:30px 0; }
-    .social-links a { color:#eee; margin: 0 10px; }
-    /* További stílusok ... */
-  </style>
+    <meta charset="UTF-8">
+    <title>Webshop Főoldal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Lato:400,700|Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Fejléc -->
-  <header>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;padding:20px 0;">
-      <div class="logo">M5Shop</div>
-      <div class="search-bar">
-        <input type="text" placeholder="Keresés termékre...">
-        <button class="cta">Keresés</button>
-      </div>
-      <div>
-        <a href="#" style="margin-right:20px;">Fiókom</a>
-        <a href="#">Kosár (<span id="cart-count">0</span>)</a>
-      </div>
-    </div>
-  </header>
-  <!-- Navigáció -->
-  <nav style="background:#007bff; color:#fff;">
-    <div class="container nav-categories" style="padding:12px 0;">
-      <a href="#" style="color:#fff;">Főoldal</a>
-      <a href="#" style="color:#fff;">Laptopok</a>
-      <a href="#" style="color:#fff;">Telefonok</a>
-      <a href="#" style="color:#fff;">Tabletek</a>
-      <a href="#" style="color:#fff;">Kiegészítők</a>
-      <a href="#" style="color:#fff;">Akciók</a>
-      <a href="#" style="color:#fff;">Kapcsolat</a>
-    </div>
-  </nav>
-  <!-- Fő banner -->
-  <section class="hero">
-    <div class="container">
-      <h1>Üdvözlünk az M5 Webshopban!</h1>
-      <p>Legújabb technológia, akciós árak, gyors szállítás</p>
-      <button class="cta">Fedezd fel kínálatunkat</button>
-    </div>
-  </section>
-  <!-- Akciós ajánlatok -->
-  <section>
-    <div class="container" style="margin:40px auto;">
-      <h2>Akciós ajánlatok</h2>
-      <div class="products">
-        <!-- Példa akciós termékek -->
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Samsung Galaxy S24</h3>
-          <p>Akciós ár: <strong>199 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
+    <!-- FEJLÉC -->
+    <header>
+        <div class="container header-flex">
+            <a href="index.html" class="logo"><img src="logo.png" alt="Webshop logó"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Főoldal</a></li>
+                    <li><a href="products.html">Termékek</a></li>
+                    <li><a href="cart.html">Kosár</a></li>
+                    <li><a href="galeria.html">Galéria</a></li>
+                    <li><a href="akciok.html">Akciók</a></li>
+                    <li><a href="markak.html">Márkák</a></li>
+                    <li><a href="inspiracio.html">Inspiráció</a></li>
+                    <li><a href="about.html">Rólunk</a></li>
+                    <li><a href="contact.html">Kapcsolat</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                    <li><a href="profile.html">Profil</a></li>
+                    <li><a href="egyebn.html">Egyéb</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="search.html" class="icon"><img src="search.svg" alt="Keresés"></a>
+                <a href="cart.html" class="icon"><img src="cart.svg" alt="Kosár"><span class="cart-count">0</span></a>
+                <a href="profile.html" class="icon"><img src="user.svg" alt="Profil"></a>
+            </div>
         </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Lenovo Ideapad</h3>
-          <p>Akciós ár: <strong>249 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
+        <div class="header-promo">
+            <p>Ingyenes szállítás 20 000 Ft felett • 24h ügyfélszolgálat • 30 napos visszaküldés</p>
         </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Apple AirPods Pro</h3>
-          <p>Akciós ár: <strong>74 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
+    </header>
+    <!-- FŐ TARTALOM -->
+    <main>
+        <section class="main-banner glass" style="margin:2em auto 0 auto; max-width:1200px; text-align:center; border-radius:24px; box-shadow:0 8px 44px #1183e416; padding:3em 2em 2.5em;">
+            <h1>Webshop – Minden, amire szükséged lehet!</h1>
+            <p>Fedezd fel a legjobb akciókat és termékeket, országos kiszállítással!</p>
+            <a href="products.html" class="cta">Vásárolj most</a>
+        </section>
+        <section class="categories" style="max-width:1200px; margin:2.5em auto 0 auto; padding:0 1em;">
+            <h2>Kiemelt kategóriák</h2>
+            <div class="category-list">
+                <a href="products.html?cat=elektronika" class="category"><img src="cat1.jpg" alt="Elektronika"><span>Elektronika</span></a>
+                <a href="products.html?cat=divat" class="category"><img src="cat2.jpg" alt="Divat"><span>Divat</span></a>
+                <a href="products.html?cat=otthon" class="category"><img src="cat3.jpg" alt="Otthon"><span>Otthon</span></a>
+                <a href="products.html?cat=jatek" class="category"><img src="cat4.jpg" alt="Játékok"><span>Játékok</span></a>
+                <a href="products.html?cat=szepseg" class="category"><img src="cat5.jpg" alt="Szépség"><span>Szépség</span></a>
+            </div>
+        </section>
+        <section class="promo-strip" style="margin:3em auto 0 auto; max-width:1100px; padding:0 1em;">
+            <h2>Aktuális akciók</h2>
+            <div class="promo-cards">
+                <div class="promo-card"><span class="promo-discount">-15%</span><p>Samsung TV-kre</p></div>
+                <div class="promo-card"><span class="promo-discount">1+1</span><p>Adidas cipőre</p></div>
+            </div>
+        </section>
+        <section class="newsletter-section glass" style="margin:3em auto 0 auto; max-width:800px; border-radius:18px;">
+            <h2>Iratkozz fel hírlevelünkre!</h2>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email címed" required>
+                <button type="submit">Feliratkozom</button>
+            </form>
+        </section>
+        <section class="reviews-section glass" style="max-width:900px;margin:3.5em auto 1.5em auto; border-radius:16px;">
+            <h2>Vásárlói vélemények</h2>
+            <div class="reviews">
+                <div class="review"><strong>Katalin</strong><span>★★★★★</span><p>Gyors szállítás, szuper árak!</p></div>
+                <div class="review"><strong>Péter</strong><span>★★★★☆</span><p>Jó ügyfélszolgálat, a termék is hibátlan.</p></div>
+            </div>
+        </section>
+    </main>
+    <!-- LÁBLÉC -->
+    <footer>
+        <div class="footer-top">
+            <div>
+                <h4>Webshop</h4>
+                <ul>
+                    <li><a href="about.html">Rólunk</a></li>
+                    <li><a href="faq.html">GYIK</a></li>
+                    <li><a href="contact.html">Kapcsolat</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kategóriák</h4>
+                <ul>
+                    <li><a href="products.html?cat=elektronika">Elektronika</a></li>
+                    <li><a href="products.html?cat=divat">Divat</a></li>
+                    <li><a href="products.html?cat=otthon">Otthon</a></li>
+                    <li><a href="products.html?cat=jatek">Játékok</a></li>
+                    <li><a href="products.html?cat=szepseg">Szépség</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Segítség</h4>
+                <ul>
+                    <li><a href="faq.html">Szállítás</a></li>
+                    <li><a href="faq.html">Visszaküldés</a></li>
+                    <li><a href="faq.html">Fizetés</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Kövess minket</h4>
+                <ul class="social">
+                    <li><a href="#"><img src="fb.svg" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="insta.svg" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="yt.svg" alt="YouTube"></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Apple iPad 10.2"</h3>
-          <p>Akciós ár: <strong>129 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
+        <div class="footer-bottom">
+            <p>© 2025 Webshop.hu • Minden jog fenntartva.</p>
+            <div>
+                <img src="visa.svg" alt="Visa" style="height:22px;vertical-align:middle;">
+                <img src="mastercard.svg" alt="Mastercard" style="height:22px;vertical-align:middle;">
+                <img src="paypal.svg" alt="PayPal" style="height:22px;vertical-align:middle;">
+            </div>
+            <div>
+                <a href="#">Adatvédelem</a>
+                <a href="#">ÁSZF</a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- Kiemelt kategóriák -->
-  <section>
-    <div class="container" style="margin:40px auto;">
-      <h2>Kiemelt kategóriák</h2>
-      <div class="products">
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Gaming Laptopok</h3>
-          <p>Erős teljesítmény, a legjobb játékélményhez</p>
-          <button class="cta">Megnézem</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Okosórák</h3>
-          <p>Stílusos, okos, egészséges</p>
-          <button class="cta">Megnézem</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Fülhallgatók</h3>
-          <p>Vezeték nélküli, kiváló hangzás</p>
-          <button class="cta">Megnézem</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Védőtokok</h3>
-          <p>Stílus és védelem minden készülékhez</p>
-          <button class="cta">Megnézem</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Termékeink -->
-  <main>
-    <div class="container" style="margin:40px auto;">
-      <h2>Legnépszerűbb termékeink</h2>
-      <div class="products">
-        <!-- 12 példa termék -->
-        <!-- Ismételd a product-card-ot, hogy kitöltse a sort/sorokat -->
-        <!-- ... 8 további termék ... -->
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Dell XPS 13</h3>
-          <p>Ár: <strong>399 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Xiaomi Mi Band 7</h3>
-          <p>Ár: <strong>14 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>PlayStation 5</h3>
-          <p>Ár: <strong>249 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
-        </div>
-        <div class="product-card">
-          <div class="product-image"></div>
-          <h3>Apple iPhone 15</h3>
-          <p>Ár: <strong>399 900 Ft</strong></p>
-          <button class="cta">Kosárba</button>
-        </div>
-        <!-- ... további product-card elemek, hogy legalább 12 legyen ... -->
-      </div>
-    </div>
-  </main>
-  <!-- Hírlevél -->
-  <section class="newsletter">
-    <div class="container">
-      <h2>Iratkozz fel hírlevelünkre!</h2>
-      <p>Elsőként értesülhetsz akcióinkról, újdonságainkról.</p>
-      <form>
-        <input type="email" placeholder="Email címed" required>
-        <button class="cta" type="submit">Feliratkozom</button>
-      </form>
-    </div>
-  </section>
-  <!-- Vélemények -->
-  <section>
-    <div class="container" style="margin:40px auto;">
-      <h2>Vásárlói vélemények</h2>
-      <div style="display:flex;gap:20px;">
-        <div style="flex:1;background:#fafafa;padding:16px;border-radius:8px;">
-          <p>"Gyors szállítás, minőségi termékek. Ajánlom mindenkinek!"</p>
-          <strong>– Anna</strong>
-        </div>
-        <div style="flex:1;background:#fafafa;padding:16px;border-radius:8px;">
-          <p>"Nagyon elégedett vagyok a vevőszolgálattal."</p>
-          <strong>– Péter</strong>
-        </div>
-        <div style="flex:1;background:#fafafa;padding:16px;border-radius:8px;">
-          <p>"Átlátható webshop, egyszerű vásárlás."</p>
-          <strong>– Márk</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Kapcsolat -->
-  <section>
-    <div class="container" style="margin:40px auto;">
-      <h2>Lépj velünk kapcsolatba!</h2>
-      <form>
-        <input type="text" placeholder="Név" required style="margin-bottom:10px;width:100%;padding:8px;">
-        <input type="email" placeholder="Email" required style="margin-bottom:10px;width:100%;padding:8px;">
-        <textarea placeholder="Üzenet" required style="margin-bottom:10px;width:100%;padding:8px;"></textarea>
-        <button class="cta" type="submit">Küldés</button>
-      </form>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container" style="display:flex;justify-content:space-between;flex-wrap:wrap;">
-      <div>
-        <h4>Információk</h4>
-        <ul style="list-style:none;padding:0;">
-          <li><a href="#" style="color:#eee;">ÁSZF</a></li>
-          <li><a href="#" style="color:#eee;">Adatvédelem</a></li>
-          <li><a href="#" style="color:#eee;">Impresszum</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elérhetőségek</h4>
-        <ul style="list-style:none;padding:0;">
-          <li>Email: info@m5shop.hu</li>
-          <li>Telefon: +36 30 123 4567</li>
-          <li>Cím: 1051 Budapest, Fő utca 1.</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Kövess minket</h4>
-        <div class="social-links">
-          <a href="#">Facebook</a>
-          <a href="#">Instagram</a>
-          <a href="#">Twitter</a>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:20px;">
-      &copy; 2025 M5 Webshop. Minden jog fenntartva.
-    </div>
-  </footer>
-  <!-- Kommentek és kitöltő sorok a 500-hoz -->
-  <!--
-    Az alábbi sorok között kommentek, extra markup ismételt elemek és helykitöltő tartalmak találhatóak,
-    hogy a kód elérje az 500 sort, de ne duplikáljon feleslegesen.
-  -->
-  <!-- További termékkártyák, például: -->
-  <!-- ... -->
-  <!--
-    Ismételd meg a product-card blokkokat vagy adj hozzá extra HTML kommenteket,
-    hogy kitöltse az 500 sort, ha szükséges.
-  -->
-  <!-- Példa extra kitöltő tartalom: -->
-  <!--
-    <div class="product-card">
-      <div class="product-image"></div>
-      <h3>Példa termék</h3>
-      <p>Ár: <strong>XX 900 Ft</strong></p>
-      <button class="cta">Kosárba</button>
-    </div>
-  -->
-  <!-- ... (több tucat kitöltő sor) ... -->
-  <!--
-    Ez egy webshop index.html fájl, amely tartalmazza a legfontosabb szekciókat: fejléc, navigáció, fő banner,
-    akciós ajánlatok, kiemelt kategóriák, terméklista, hírlevél, vélemények, kapcsolat és lábléc.
-    A tényleges termékeket, véleményeket, elérhetőségeket és egyéb tartalmakat igény szerint módosíthatod.
-    A sorok számát az ismételt és kommentelt blokkokkal egészítsd ki 500-ig.
-  -->
+    </footer>
 </body>
 </html>
